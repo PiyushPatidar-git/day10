@@ -1,0 +1,52 @@
+#include<iostream>
+using namespace std;
+
+int exchangee(){
+    int size = 5;
+    int arr1[size];
+    int arr2[size];
+    // input
+    cout<<"type nelment:";
+    for(int i=0; i<size; i++){
+        cin>>arr1[i];
+    }
+    // tranfer one array element to other array
+    int j=0;
+    for(int i=size-1; i>=0; i--){
+        
+        arr2[i] = arr1[j];
+        j++;
+        
+    }
+    // transfer element in reverse format in previous array
+    for(int i=0; i<size; i++){
+        arr1[i] = arr2[i];
+    }
+    // print
+    for(int i=0; i<size; i++){
+        cout<<arr1[i];
+    }
+    return 0;
+}
+int swap(){
+     int size = 5;
+    int arr1[size];
+    cout<<"type nelment 2:";
+    for(int i=0; i<size; i++){
+        cin>>arr1[i];
+    }
+    int j= size-1;
+    for(int i=0; i<j; i++){
+        swap(arr1[i],arr1[j]);
+        j--;
+    }
+    for(int i=0; i<size; i++){
+        cout<<arr1[i];
+    }
+return 0;
+}
+
+int main(){
+    swap();
+    return 0;
+}
